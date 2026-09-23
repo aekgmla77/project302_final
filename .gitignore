@@ -38,3 +38,20 @@ out/
 
 ### ignore ###
 src/main/resources/application.properties
+src/main/resources/firebase/
+
+### Local secrets ###
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+service-account*.json
+firebase-adminsdk-*.json
+
+### OS files ###
+.DS_Store
+Thumbs.db
