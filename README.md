@@ -1,31 +1,27 @@
 # Project 302
 
-대학생을 위한 공동구매·OTT 파티 매칭 웹 서비스입니다. 상품 및 그룹을 등록하고, 채팅과 일정 조율을 통해 거래를 진행할 수 있습니다.
+대학생을 위한 공동구매·OTT 파티 매칭 웹 서비스입니다.  
+같은 상품을 함께 구매하거나 OTT를 함께 이용할 사용자를 찾고, 채팅과 일정 조율을 통해 거래를 진행할 수 있도록 제작했습니다.
 
-## Tech stack
+## 주요 기능
 
-- Java 17, Spring Boot 3.2
-- Spring Data JPA, QueryDSL, MySQL
-- Spring Security, OAuth2, JWT
-- Thymeleaf, JavaScript
-- WebSocket/STOMP, Firebase Cloud Messaging
-- AWS S3, SQS
+- 공동구매 상품 등록, 검색 및 관리
+- OTT 파티 생성·참여 및 인원 관리
+- 실시간 채팅과 파일 전송
+- 거래 일정 등록 및 캘린더 관리
+- 거래 완료 후 리뷰 작성 및 조회
+- 관심 상품 등록과 마이페이지
+- 학교 인증 및 소셜 로그인
+- 알림 전송
 
-## Run locally
+## 기술 스택
 
-1. Java 17과 MySQL을 준비합니다.
-2. `src/main/resources/application-example.properties`를 복사해 `application.properties`를 만들고, 로컬 환경의 값으로 채웁니다.
-3. Firebase Admin SDK 키 파일을 `src/main/resources/firebase/project302-firebase-key.json`에 둡니다. 이 파일은 Git에 포함되지 않습니다.
-4. 아래 명령으로 실행합니다.
-
-```bash
-./gradlew bootRun
-```
-
-Windows에서는 `gradlew.bat bootRun`을 사용합니다.
-
-## Secret handling
-
-- `application.properties`, Firebase 서비스 계정 JSON, 인증서·키 파일은 Git에 올리지 않습니다.
-- 이미 공개된 AWS 키, JWT secret, OAuth client secret 등은 즉시 폐기하고 새 값으로 교체합니다.
-- 예시 설정 파일에는 실제 값 대신 빈 값 또는 설명만 둡니다.
+| 구분 | 사용 기술 |
+| --- | --- |
+| Backend | Java 17, Spring Boot 3.2, Spring Data JPA, QueryDSL |
+| Database | MySQL |
+| Security | Spring Security, OAuth2, JWT |
+| Frontend | Thymeleaf, JavaScript, CSS |
+| Real-time | WebSocket, STOMP |
+| Cloud / Notification | AWS S3, AWS SQS, Firebase Cloud Messaging |
+| Build | Gradle |
